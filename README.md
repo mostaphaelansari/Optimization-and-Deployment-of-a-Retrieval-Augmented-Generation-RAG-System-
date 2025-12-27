@@ -7,6 +7,7 @@
 ![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-black?style=for-the-badge)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Store-FF6F00?style=for-the-badge)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web%20UI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 **A production-ready RAG pipeline for intelligent question-answering over PDF documents**
 
@@ -15,6 +16,7 @@
 [Usage](#-usage) •
 [Architecture](#-architecture) •
 [Evaluation](#-evaluation) •
+[Docker](#-docker) •
 [Team](#-team)
 
 </div>
@@ -78,6 +80,46 @@ This project implements a complete **Retrieval Augmented Generation (RAG)** syst
 
 </td>
 </tr>
+<tr>
+<td width="50%">
+
+### 🧪 Experimentation Framework
+- Test multiple chunk sizes
+- Compare embedding models
+- Evaluate similarity thresholds
+- Automated result analysis
+
+</td>
+<td width="50%">
+
+### ✏️ Query Rewriting
+- **HyDE**: Hypothetical Document Embedding
+- **Step-back**: Broader context queries
+- **Decompose**: Break complex questions
+- **Expand**: Add synonyms & related terms
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Quality Evaluation
+- Factuality metrics
+- Coherence scoring
+- Precision measurement
+- Detailed analysis reports
+
+</td>
+<td width="50%">
+
+### 🐳 Docker Support
+- Docker Compose ready
+- Ollama container included
+- Volume persistence
+- Easy deployment
+
+</td>
+</tr>
 </table>
 
 ---
@@ -92,26 +134,26 @@ This project implements a complete **Retrieval Augmented Generation (RAG)** syst
 │   📄 PDFs                                                               │
 │      │                                                                  │
 │      ▼                                                                  │
-│   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐                │
+│   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐                 │
 │   │   Loading   │───▶│  Chunking   │───▶│ Embeddings  │                │
-│   │  (PyPDF)    │    │  (1000ch)   │    │  (MiniLM)   │                │
-│   └─────────────┘    └─────────────┘    └─────────────┘                │
+│   │  (PyPDF)    │    │  (1000ch)   │    │  (MiniLM)   │                 │
+│   └─────────────┘    └─────────────┘    └─────────────┘                 │
 │                                                │                        │
 │                                                ▼                        │
-│                                         ┌─────────────┐                │
-│                                         │  ChromaDB   │                │
-│                                         │ Vector Store│                │
-│                                         └─────────────┘                │
+│                                         ┌─────────────┐                 │
+│                                         │  ChromaDB   │                 │
+│                                         │ Vector Store│                 │
+│                                         └─────────────┘                 │
 │                                                │                        │
-│   ┌─────────────┐    ┌─────────────┐          │                        │
+│   ┌─────────────┐    ┌─────────────┐          │                         │
 │   │   Answer    │◀───│   Ollama    │◀─────────┘                        │
-│   │             │    │  (Qwen2.5)  │                                   │
-│   └─────────────┘    └─────────────┘                                   │
-│         │                   ▲                                          │
-│         │            ┌─────────────┐    ┌─────────────┐                │
-│         │            │   Prompt    │◀───│  Retriever  │                │
-│         │            │  Template   │    │   (Top-K)   │                │
-│         │            └─────────────┘    └─────────────┘                │
+│   │             │    │  (Qwen2.5)  │                                    │
+│   └─────────────┘    └─────────────┘                                    │
+│         │                   ▲                                           │
+│         │            ┌─────────────┐    ┌─────────────┐                 │
+│         │            │   Prompt    │◀───│  Retriever  │                 │
+│         │            │  Template   │    │   (Top-K)   │                 │
+│         │            └─────────────┘    └─────────────┘                 │
 │         ▼                                      ▲                        │
 │   ┌─────────────┐                              │                        │
 │   │  User Query │──────────────────────────────┘                        │
@@ -133,6 +175,8 @@ RAG-Project/
 ├── 📋 requirements.txt            # Python dependencies
 ├── 📝 template.py                 # Prompt templates
 ├── 📖 README.md                   # Project documentation
+├── 🐳 Dockerfile                  # Docker image definition
+├── 🐳 docker-compose.yml          # Multi-container orchestration
 │
 ├── 📂 data/
 │   ├── 1706.03762v7.pdf          # Attention Is All You Need
@@ -142,12 +186,15 @@ RAG-Project/
 │
 ├── 📂 src/
 │   ├── __init__.py
-│   ├── document_indexer.py       # Q1: Document loading & chunking
-│   ├── vector_store.py           # Q1: ChromaDB vector storage
-│   ├── document_retriever.py     # Q2: Semantic retrieval
-│   ├── llm_qa_system.py          # Q3: LLM question-answering
-│   ├── evaluator.py              # Q4: Evaluation metrics
-│   ├── chatbot.py                # Q5: Conversational chatbot
+│   ├── document_indexer.py       # Document loading & chunking
+│   ├── vector_store.py           # ChromaDB vector storage
+│   ├── document_retriever.py     # Semantic retrieval
+│   ├── llm_qa_system.py          # LLM question-answering
+│   ├── evaluator.py              # Evaluation metrics
+│   ├── chatbot.py                # Conversational chatbot
+│   ├── experimenter.py           # Experimentation framework
+│   ├── quality_evaluator.py      # Quality metrics (factuality, coherence)
+│   ├── query_rewriter.py         # Query rewriting (HyDE, step-back)
 │   │
 │   └── 📂 utils/
 │       ├── __init__.py
@@ -155,6 +202,7 @@ RAG-Project/
 │       ├── logger.py             # Logging utilities
 │       └── metrics.py            # Evaluation metrics
 │
+├── 📂 experiments/               # Experiment results
 └── 📂 vector_store/              # Persisted embeddings (gitignored)
 ```
 
@@ -238,6 +286,9 @@ streamlit run app.py
 | `ask` | Ask a question | `python cli.py ask "What is BERT?" -s` |
 | `chat` | Interactive chatbot | `python cli.py chat` |
 | `evaluate` | Run evaluation | `python cli.py evaluate -o results.json` |
+| `experiment` | Run experiments | `python cli.py experiment --quick` |
+| `rewrite` | Rewrite queries | `python cli.py rewrite "BERT?" -s hyde` |
+| `quality` | Quality evaluation | `python cli.py quality "What is BERT?"` |
 | `stats` | Vector store info | `python cli.py stats` |
 | `models` | List Ollama models | `python cli.py models` |
 | `config` | Show configuration | `python cli.py config` |
@@ -314,6 +365,46 @@ python cli.py evaluate -o results.json
 | **Answer Relevance** | 0.77 | How well answer addresses question |
 | **Faithfulness** | 0.36 | Grounding in retrieved context |
 | **Word Overlap F1** | 0.23 | Lexical similarity to ground truth |
+
+---
+
+## 🐳 Docker
+
+### Quick Start with Docker
+
+```bash
+# Start all services (Ollama + RAG app)
+docker-compose up -d
+
+# Pull the LLM model
+docker exec -it rag-ollama ollama pull qwen2.5:1.5b
+
+# Run CLI commands
+docker-compose run rag-app python cli.py index data/ -d
+docker-compose run rag-app python cli.py ask "What is BERT?"
+docker-compose run rag-app python cli.py experiment --quick
+```
+
+### Services
+
+| Service | Port | Description |
+|---------|------|-------------|
+| `rag-ollama` | 11434 | Ollama LLM server |
+| `rag-web` | 8502 | Streamlit Web UI |
+| `rag-app` | - | CLI application |
+
+### Docker Commands
+
+```bash
+# View logs
+docker-compose logs -f
+
+# Stop all services
+docker-compose down
+
+# Rebuild images
+docker-compose build --no-cache
+```
 
 ---
 
