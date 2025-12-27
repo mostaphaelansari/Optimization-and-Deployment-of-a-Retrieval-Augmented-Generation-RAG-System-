@@ -1,0 +1,87 @@
+# RAG System Configuration
+# Using Ollama for LLM
+
+# Paths
+paths:
+  data_dir: "data"
+  vector_store_dir: "vector_store"
+  logs_dir: "logs"
+
+# Document Processing
+document_processing:
+  chunk_size: 1000
+  chunk_overlap: 200
+  split_method: "recursive"  # Options: markdown, recursive, character
+
+# Embedding Model (Hugging Face)
+embeddings:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  device: "cpu"  # Use CPU (change to cuda if GPU available)
+
+# Vector Store
+vector_store:
+  type: "chroma"
+  collection_name: "rag_documents"
+  similarity_metric: "cosine"
+
+# Retrieval
+retrieval:
+  top_k: 5
+  score_threshold: 0.3
+
+# LLM Configuration - Ollama
+llm:
+  provider: "ollama"
+  model_name: "qwen2.5:1.5b"  # Qwen 2.5 1.5B model
+  base_url: "http://127.0.0.1:11434"
+  max_new_tokens: 512
+  temperature: 0.7
+
+# Chatbot
+chatbot:
+  max_history_length: 10
+  system_message: "You are a helpful assistant that answers questions based on the provided documents about Transformers, BERT, and GPT-3."
+
+# Evaluation
+evaluation:
+  metrics:
+    - "faithfulness"
+    - "answer_relevancy"
+    - "context_precision"
+    - "context_recall"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Experimentation Settings
+experimentation:
+  chunk_sizes: [256, 512, 1000, 2000]
+  embedding_models:
+    - "sentence-transformers/all-MiniLM-L6-v2"
+    - "sentence-transformers/all-mpnet-base-v2"
+    - "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
+  similarity_thresholds: [0.2, 0.3, 0.4, 0.5]
+  results_dir: "experiments"
+
+# Query Rewriting
+query_rewriting:
+  enabled: true
+  default_strategy: "auto"  # Options: auto, expand, decompose, hyde, stepback
+  hyde:
+    max_tokens: 256
+    temperature: 0.3
+  expansion:
+    max_terms: 5
+
+# Quality Evaluation
+quality_evaluation:
+  metrics:
+    - "factuality"
+    - "coherence"
+    - "precision"
+  thresholds:
+    claim_coverage: 0.5
+    source_grounding: 0.3
+    topic_consistency: 0.6

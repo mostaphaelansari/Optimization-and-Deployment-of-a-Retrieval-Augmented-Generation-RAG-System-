@@ -1,0 +1,4 @@
+The RAG (Retrieval-Augmented Generation) project is designed to demonstrate how to build a question-answering system using LLMs and vector databases.
+It uses ChromaDB for storing embeddings and Ollama for the LLM.
+The project structure includes source code in the 'src' directory and configuration in 'config.yaml'.
+LangChain is used as the orchestration framework.

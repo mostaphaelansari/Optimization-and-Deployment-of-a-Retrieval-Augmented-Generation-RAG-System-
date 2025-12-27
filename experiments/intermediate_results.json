@@ -1,0 +1,190 @@
+{
+  "results": [
+    {
+      "config": {
+        "chunk_size": 256,
+        "chunk_overlap": 51,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "similarity_threshold": 0.3,
+        "top_k": 5
+      },
+      "retrieval_metrics": {
+        "precision@5": 0.86,
+        "recall@5": 4.3,
+        "f1@5": 1.4334,
+        "mrr": 0.8667,
+        "map": 4.0217,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.402,
+        "word_overlap_recall": 0.5792,
+        "word_overlap_f1": 0.4571,
+        "bigram_overlap": 0.2542,
+        "trigram_overlap": 0.2183,
+        "faithfulness": 0.4836,
+        "answer_relevance": 0.8309,
+        "length_similarity": 0.6249
+      },
+      "avg_latency_ms": 1714.424443244934,
+      "num_samples": 10,
+      "error": "",
+      "timestamp": "2025-12-25T00:09:55.098960"
+    },
+    {
+      "config": {
+        "chunk_size": 256,
+        "chunk_overlap": 51,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "similarity_threshold": 0.4,
+        "top_k": 5
+      },
+      "retrieval_metrics": {
+        "precision@5": 0.86,
+        "recall@5": 4.3,
+        "f1@5": 1.4334,
+        "mrr": 0.8667,
+        "map": 4.0217,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.4332,
+        "word_overlap_recall": 0.572,
+        "word_overlap_f1": 0.4708,
+        "bigram_overlap": 0.3055,
+        "trigram_overlap": 0.2604,
+        "faithfulness": 0.4595,
+        "answer_relevance": 0.8024,
+        "length_similarity": 0.6636
+      },
+      "avg_latency_ms": 1688.092017173767,
+      "num_samples": 10,
+      "error": "",
+      "timestamp": "2025-12-25T00:10:11.983239"
+    },
+    {
+      "config": {
+        "chunk_size": 512,
+        "chunk_overlap": 102,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "similarity_threshold": 0.3,
+        "top_k": 5
+      },
+      "retrieval_metrics": {
+        "precision@5": 0.94,
+        "recall@5": 4.7,
+        "f1@5": 1.5667,
+        "mrr": 1.0,
+        "map": 4.655,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.409,
+        "word_overlap_recall": 0.6176,
+        "word_overlap_f1": 0.4723,
+        "bigram_overlap": 0.2562,
+        "trigram_overlap": 0.2215,
+        "faithfulness": 0.5601,
+        "answer_relevance": 0.8595,
+        "length_similarity": 0.5925
+      },
+      "avg_latency_ms": 1716.8249368667603,
+      "num_samples": 10,
+      "error": "",
+      "timestamp": "2025-12-25T00:10:29.154489"
+    },
+    {
+      "config": {
+        "chunk_size": 512,
+        "chunk_overlap": 102,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "similarity_threshold": 0.4,
+        "top_k": 5
+      },
+      "retrieval_metrics": {
+        "precision@5": 0.94,
+        "recall@5": 4.7,
+        "f1@5": 1.5667,
+        "mrr": 1.0,
+        "map": 4.655,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.4193,
+        "word_overlap_recall": 0.6401,
+        "word_overlap_f1": 0.4868,
+        "bigram_overlap": 0.2632,
+        "trigram_overlap": 0.1903,
+        "faithfulness": 0.5703,
+        "answer_relevance": 0.8595,
+        "length_similarity": 0.6302
+      },
+      "avg_latency_ms": 1710.6337070465088,
+      "num_samples": 10,
+      "error": "",
+      "timestamp": "2025-12-25T00:10:46.264324"
+    },
+    {
+      "config": {
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "similarity_threshold": 0.3,
+        "top_k": 5
+      },
+      "retrieval_metrics": {
+        "precision@5": 0.92,
+        "recall@5": 4.6,
+        "f1@5": 1.5334,
+        "mrr": 1.0,
+        "map": 4.6,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.323,
+        "word_overlap_recall": 0.5352,
+        "word_overlap_f1": 0.3702,
+        "bigram_overlap": 0.1551,
+        "trigram_overlap": 0.1131,
+        "faithfulness": 0.5793,
+        "answer_relevance": 0.8559,
+        "length_similarity": 0.4715
+      },
+      "avg_latency_ms": 1765.5707120895386,
+      "num_samples": 10,
+      "error": "",
+      "timestamp": "2025-12-25T00:11:03.923046"
+    },
+    {
+      "config": {
+        "chunk_size": 1000,
+        "chunk_overlap": 200,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "similarity_threshold": 0.4,
+        "top_k": 5
+      },
+      "retrieval_metrics": {
+        "precision@5": 0.92,
+        "recall@5": 4.6,
+        "f1@5": 1.5334,
+        "mrr": 1.0,
+        "map": 4.6,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.3929,
+        "word_overlap_recall": 0.6578,
+        "word_overlap_f1": 0.4731,
+        "bigram_overlap": 0.2362,
+        "trigram_overlap": 0.1587,
+        "faithfulness": 0.5648,
+        "answer_relevance": 0.8595,
+        "length_similarity": 0.5313
+      },
+      "avg_latency_ms": 1798.1504678726196,
+      "num_samples": 10,
+      "error": "",
+      "timestamp": "2025-12-25T00:11:21.908239"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+# RAG System - Docker Compose Configuration
+# Includes RAG application and Ollama service
+
+services:
+  # Ollama LLM Service
+  ollama:
+    image: ollama/ollama:latest
+    container_name: rag-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    # Uncomment for GPU support (NVIDIA)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+    # RAG Application
+  rag-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag-app
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    volumes:
+      - ./data:/app/data
+      - ./vector_store:/app/vector_store
+      - ./experiments:/app/experiments
+      - ./logs:/app/logs
+    ports:
+      - "8501:8501"
+    stdin_open: true
+    tty: true
+    command: [ "python", "cli.py", "--help" ]
+
+  # Streamlit Web Interface
+  rag-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag-web
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    volumes:
+      - ./data:/app/data
+      - ./vector_store:/app/vector_store
+      - ./experiments:/app/experiments
+    ports:
+      - "8502:8501"
+    command: [ "streamlit", "run", "app.py", "--server.address", "0.0.0.0" ]
+
+volumes:
+  ollama_data:

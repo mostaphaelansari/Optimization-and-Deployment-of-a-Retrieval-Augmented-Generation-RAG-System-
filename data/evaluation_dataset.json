@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the main architecture introduced in the Attention Is All You Need paper?",
+    "ground_truth": "The Transformer architecture, which relies entirely on self-attention mechanisms without using recurrence or convolutions.",
+    "expected_sources": ["data\\1706.03762v7.pdf"]
+  },
+  {
+    "question": "How many parameters does GPT-3 have?",
+    "ground_truth": "GPT-3 has 175 billion parameters.",
+    "expected_sources": ["data\\2005.14165v4.pdf"]
+  },
+  {
+    "question": "What is few-shot learning as described in the GPT-3 paper?",
+    "ground_truth": "Few-shot learning is when the model is given a few demonstrations of a task at inference time as conditioning, but no gradient updates are performed.",
+    "expected_sources": ["data\\2005.14165v4.pdf"]
+  },
+  {
+    "question": "What does BERT stand for?",
+    "ground_truth": "BERT stands for Bidirectional Encoder Representations from Transformers.",
+    "expected_sources": ["data\\1810.04805v2.pdf"]
+  },
+  {
+    "question": "What are the two pre-training tasks used in BERT?",
+    "ground_truth": "BERT uses two pre-training tasks: Masked Language Modeling (MLM) and Next Sentence Prediction (NSP).",
+    "expected_sources": ["data\\1810.04805v2.pdf"]
+  },
+  {
+    "question": "What is self-attention?",
+    "ground_truth": "Self-attention allows the model to attend to all positions in the input sequence simultaneously, computing representations by relating different positions of a single sequence.",
+    "expected_sources": ["data\\1706.03762v7.pdf"]
+  },
+  {
+    "question": "What is multi-head attention?",
+    "ground_truth": "Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions by running multiple attention functions in parallel.",
+    "expected_sources": ["data\\1706.03762v7.pdf"]
+  },
+  {
+    "question": "What is the difference between zero-shot, one-shot, and few-shot learning?",
+    "ground_truth": "Zero-shot provides only a task description, one-shot provides one example along with the description, and few-shot provides a few examples (typically 10-100) as demonstrations.",
+    "expected_sources": ["data\\2005.14165v4.pdf"]
+  },
+  {
+    "question": "What is positional encoding in the Transformer?",
+    "ground_truth": "Positional encoding adds information about the position of tokens in the sequence since the Transformer has no recurrence. It uses sine and cosine functions of different frequencies.",
+    "expected_sources": ["data\\1706.03762v7.pdf"]
+  },
+  {
+    "question": "What percentage of tokens does BERT mask during pre-training?",
+    "ground_truth": "BERT randomly masks 15% of the input tokens for the Masked Language Modeling task.",
+    "expected_sources": ["data\\1810.04805v2.pdf"]
+  }
+]

@@ -1,0 +1,337 @@
+{
+  "summary": {
+    "num_samples": 10,
+    "avg_latency_ms": 3316.35,
+    "evaluation_date": "2025-11-22T02:29:30.715240"
+  },
+  "retrieval_metrics": {
+    "precision@5": 0.94,
+    "recall@5": 4.7,
+    "f1@5": 1.5667,
+    "mrr": 1.0,
+    "map": 4.7,
+    "hit_rate@5": 1.0
+  },
+  "answer_metrics": {
+    "word_overlap_precision": 0.1402,
+    "word_overlap_recall": 0.6088,
+    "word_overlap_f1": 0.2236,
+    "bigram_overlap": 0.0402,
+    "trigram_overlap": 0.0158,
+    "faithfulness": 0.393,
+    "answer_relevance": 0.8234,
+    "length_similarity": 0.2163
+  },
+  "individual_results": [
+    {
+      "question": "What is the main architecture introduced in the Attention Is All You Need paper?",
+      "generated_answer": "The main architecture introduced is that of a Transformer model, which uses stacked self-attention mechanisms along with point-wise fully connected layers for both encoder and decoder components (referenced from data\\1706.03762v7.pdf). This structure comprises N=6 identical layers in the Encoder part of this architecture, as depicted on Page 2. The details about model sizes are also provided using BERTBASE configuration for reference purposes and to compare results (referenced from data\\1810.04805v2.pdf).\n\nSOURCE: [data\\1706.03762v7.pdf, Page 2], further details can be found in \"The Annotated Transformer\" and the original paper by Vaswani et al., as mentioned for more background (referenced from data\\1810.04805v2.pdf).",
+      "ground_truth": "The Transformer architecture, which relies entirely on self-attention mechanisms without using recurrence or convolutions.",
+      "sources": [
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\1810.04805v2.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 0.4,
+        "recall@5": 2.0,
+        "f1@5": 0.6667,
+        "mrr": 1.0,
+        "map": 2.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1111,
+        "word_overlap_recall": 0.5714,
+        "word_overlap_f1": 0.186,
+        "bigram_overlap": 0.0109,
+        "trigram_overlap": 0.0,
+        "faithfulness": 0.5385,
+        "answer_relevance": 0.5556,
+        "length_similarity": 0.1429
+      },
+      "latency_ms": 9584.94
+    },
+    {
+      "question": "How many parameters does GPT-3 have?",
+      "generated_answer": "The context provided does not contain specific information regarding the number of parameters GPT-3 has. I don't have enough information in the provided documents to answer this question. (Source Documents Not Applicable)",
+      "ground_truth": "GPT-3 has 175 billion parameters.",
+      "sources": [
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1154,
+        "word_overlap_recall": 0.6,
+        "word_overlap_f1": 0.1935,
+        "bigram_overlap": 0.0323,
+        "trigram_overlap": 0.0,
+        "faithfulness": 0.1176,
+        "answer_relevance": 0.75,
+        "length_similarity": 0.1562
+      },
+      "latency_ms": 841.76
+    },
+    {
+      "question": "What is few-shot learning as described in the GPT-3 paper?",
+      "generated_answer": "Few-shot learning, as described in relation to GPT-3 within these contexts (Sources: data\\2005.14165v4.pdf, Pages: 33), refers to the method where a language model learns from limited amounts of task-specific data during pre-training or fine-tuning phases instead of extensive datasets that humans are exposed to in their lifetime (Lin20). While it is suggested as an advancement for identifying elements at test time, there remains ambiguity about its precise mechanics and effectiveness. The provided context also implies challenges associated with the costly inference process due to model scale but does not elaborate further on how few-shot learning operates within GPT-3 specifically (Sources: data\\2005.14165v4.pdf, Pages: 33).\n\nI don't have enough information in the provided documents to detail precisely HOW few-shot learning works for language models like GPT-3 beyond its general concept and associated challenges mentioned herein (Sources: data\\2005.14165v4.pdf, Pages: 33).",
+      "ground_truth": "Few-shot learning is when the model is given a few demonstrations of a task at inference time as conditioning, but no gradient updates are performed.",
+      "sources": [
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1275,
+        "word_overlap_recall": 0.5652,
+        "word_overlap_f1": 0.208,
+        "bigram_overlap": 0.0079,
+        "trigram_overlap": 0.0,
+        "faithfulness": 0.3649,
+        "answer_relevance": 0.8571,
+        "length_similarity": 0.1825
+      },
+      "latency_ms": 3217.26
+    },
+    {
+      "question": "What does BERT stand for?",
+      "generated_answer": "The provided context does not contain enough information about what BERT stands for. Therefore, I don't have enough information in the provided documents to answer this question (data\\1810.04805v2.pdf).",
+      "ground_truth": "BERT stands for Bidirectional Encoder Representations from Transformers.",
+      "sources": [
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.125,
+        "word_overlap_recall": 0.375,
+        "word_overlap_f1": 0.1875,
+        "bigram_overlap": 0.08,
+        "trigram_overlap": 0.0385,
+        "faithfulness": 0.125,
+        "answer_relevance": 0.6667,
+        "length_similarity": 0.2857
+      },
+      "latency_ms": 931.95
+    },
+    {
+      "question": "What are the two pre-training tasks used in BERT?",
+      "generated_answer": "The context above does not specify the two pre-training tasks used for BERT, so I don't have enough information from these provided documents to answer this question (Source: data\\1810.04805v2.pdf).",
+      "ground_truth": "BERT uses two pre-training tasks: Masked Language Modeling (MLM) and Next Sentence Prediction (NSP).",
+      "sources": [
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1429,
+        "word_overlap_recall": 0.2857,
+        "word_overlap_f1": 0.1905,
+        "bigram_overlap": 0.0714,
+        "trigram_overlap": 0.037,
+        "faithfulness": 0.5294,
+        "answer_relevance": 0.8333,
+        "length_similarity": 0.4828
+      },
+      "latency_ms": 964.02
+    },
+    {
+      "question": "What is self-attention?",
+      "generated_answer": "Self-attention, also known as intra-attention, is an attention mechanism that relates different positions within a single sequence to compute its representation (Source: data\\1706.03762v7.pdf). It has been successfully applied in various tasks such as reading comprehension and summarization by capturing relationships between elements of the input for better understanding or generation, even over long distances (Sources on Page 1 & Figure 3 from data\\1706.03762v7.pdf). Additionally, self-attention can extrapolate to longer sequences than those encountered during training by leveraging its mechanism of relating sequence positions (Source: data\\1706.03762v7.pdf on Page 5).\n\nSOURCES PROVIDED IN ANSWER: Data extracted from pages 1, Figure 3 and page 5 within the document titled \"data\\1706.03762v7.pdf\".",
+      "ground_truth": "Self-attention allows the model to attend to all positions in the input sequence simultaneously, computing representations by relating different positions of a single sequence.",
+      "sources": [
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1625,
+        "word_overlap_recall": 0.65,
+        "word_overlap_f1": 0.26,
+        "bigram_overlap": 0.04,
+        "trigram_overlap": 0.0097,
+        "faithfulness": 0.5088,
+        "answer_relevance": 1.0,
+        "length_similarity": 0.2243
+      },
+      "latency_ms": 2822.45
+    },
+    {
+      "question": "What is multi-head attention?",
+      "generated_answer": "Multi-head attention is a mechanism used within certain models, like Transformers, where multiple parallel sets of attention weights are computed simultaneously using different learned linear transformations (projections). These separate \"attention heads\" allow the model to jointly attend to information from various representation subspaces at different positions. Specifically, in multi-head attention:\n\n1. The input queries (Q), keys (K), and values (V) undergo distinct projections using parameter matrices W^Q_i ∈ Rdmodel×dk , W^K_i ∈ Rdmodel×dk , and W^V_i ∈ Rdmodel×dv, respectively.\n2. Each head independently computes attention outputs through the Attention(QW^Q_i, KW^K_i, VW^V_i) operation for dk = dv = dmodel/h heads (where h is equal to 8 in this context). The dimensions of these projections are reduced from Rdmodel×dk and projected back into the original dimensionality.\n3. These outputs are concatenated together, then reprojected once again using an additional parameter matrix W^O, yielding final values used for further processing within the model architecture (as shown in Figure 2 of your source documents). This structure allows different heads to specialize and potentially capture various aspects or structures from input sequences.\n4. The context suggests that these attention mechanisms enable multi-head models like Transformers to learn distinct tasks through their multiple parallelized approaches, as indicated by examples showing the learned behavior related to sentence structuring in encoder self-attention at layer 5 of a six-layered model (source: data\\1706.03762v7).\n\nReferences from provided context include pages mentioned directly and can be cited as follows if needed for specific details, although the main concept is described above with enough information taken straight from your source documents: [Source: data\\1706.03762v7.pdf, Pages 4 & 14].\n\nRemember that this explanation focuses solely on extracting and paraphrasing relevant details directly stated in the provided context without inferring or assuming additional information beyond what is presented therein.",
+      "ground_truth": "Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions by running multiple attention functions in parallel.",
+      "sources": [
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1022,
+        "word_overlap_recall": 0.9048,
+        "word_overlap_f1": 0.1836,
+        "bigram_overlap": 0.0435,
+        "trigram_overlap": 0.032,
+        "faithfulness": 0.3182,
+        "answer_relevance": 1.0,
+        "length_similarity": 0.0819
+      },
+      "latency_ms": 6291.82
+    },
+    {
+      "question": "What is the difference between zero-shot, one-shot, and few-shot learning?",
+      "generated_answer": "Zero-shot learning involves adapting a model to perform tasks without any task-specific data, whereas one-shot (1S) requires only one demonstration plus a natural language description of the task for adaptation. Few-shot learning necessitates more than one but still limited examples along with descriptions or instructions in addition to pre-training broadly distributed tasks and then rapidly adapting to new ones as indicated by source documents data\\2005.14165v4.pdf, Page: 5. The context suggests that few-shot learning is related but distinct from zero-shot (no specific task examples required) and one-shot methods in terms of the amount of demonstration needed for adaptation.\n\nSOURCE: data\\2005.14165v4.pdf, Pages 5 & 6",
+      "ground_truth": "Zero-shot provides only a task description, one-shot provides one example along with the description, and few-shot provides a few examples (typically 10-100) as demonstrations.",
+      "sources": [
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf",
+        "data\\2005.14165v4.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1842,
+        "word_overlap_recall": 0.7,
+        "word_overlap_f1": 0.2917,
+        "bigram_overlap": 0.0102,
+        "trigram_overlap": 0.0,
+        "faithfulness": 0.5,
+        "answer_relevance": 0.7143,
+        "length_similarity": 0.233
+      },
+      "latency_ms": 2384.48
+    },
+    {
+      "question": "What is positional encoding in the Transformer?",
+      "generated_answer": "Positional encoding in the Transformer architecture is a method used within both encoder and decoder stacks, as shown on page 5 of [data\\1706.03762v7.pdf]. It involves using sine and cosine functions with different frequencies to generate values for each position:\n\nP E(pos,2i) = sin(pos/10000^(2*i)/dmodel )  \nP E(pos,2i+1) = cos(pos/10000^(2*i)/dmodel )  \nwhere 'pos' stands for the position and 'i' is a dimension. Each of these dimensions has dmodel components that can be summed with corresponding embedding values due to having matching dimensionality, allowing them to complement each other in encoding relative positions within sequences (Source: data\\1706.03762v7.pdf).\n\nReference: [data\\1706.03762v7.pdf], Page 5; same page describes the use of sine and cosine functions for generating these positional encodings, which are essential in capturing relative positions within sequence data processed by Transformers (Source: data\\170603762V7).",
+      "ground_truth": "Positional encoding adds information about the position of tokens in the sequence since the Transformer has no recurrence. It uses sine and cosine functions of different frequencies.",
+      "sources": [
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf",
+        "data\\1706.03762v7.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1839,
+        "word_overlap_recall": 0.6667,
+        "word_overlap_f1": 0.2883,
+        "bigram_overlap": 0.069,
+        "trigram_overlap": 0.0168,
+        "faithfulness": 0.4923,
+        "answer_relevance": 1.0,
+        "length_similarity": 0.2109
+      },
+      "latency_ms": 3673.23
+    },
+    {
+      "question": "What percentage of tokens does BERT mask during pre-training?",
+      "generated_answer": "BERT masks tokens during pre-training with a probability of 80% for the Masked Language Model (MLM) task, as indicated by the provided context on Page 15 from source `data\\1810.04805v2.pdf`. The remaining percentage is split equally between keeping the target token unchanged ([SAME]) and replacing it with a random token ([R ND]), which accounts for 10% each, totaling up to 90%. Thus, if there are any tokens not covered by these three strategies (80%, 10%, 10%), they remain as-is in the context given.\n\nSource: data\\1810.04805v2.pdf, Page: 15",
+      "ground_truth": "BERT randomly masks 15% of the input tokens for the Masked Language Modeling task.",
+      "sources": [
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf",
+        "data\\1810.04805v2.pdf"
+      ],
+      "retrieval_metrics": {
+        "precision@5": 1.0,
+        "recall@5": 5.0,
+        "f1@5": 1.6667,
+        "mrr": 1.0,
+        "map": 5.0,
+        "hit_rate@5": 1.0
+      },
+      "answer_metrics": {
+        "word_overlap_precision": 0.1471,
+        "word_overlap_recall": 0.7692,
+        "word_overlap_f1": 0.2469,
+        "bigram_overlap": 0.0366,
+        "trigram_overlap": 0.0238,
+        "faithfulness": 0.4348,
+        "answer_relevance": 0.8571,
+        "length_similarity": 0.1628
+      },
+      "latency_ms": 2451.61
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+
+# LangChain
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-huggingface>=0.0.1
+langchain-ollama>=0.1.0
+langchain-chroma>=0.1.0
+
+# Vector Store
+chromadb>=0.4.22
+
+# Embeddings
+sentence-transformers>=2.2.2
+transformers>=4.36.0
+
+# PyTorch (for embeddings on GPU)
+torch>=2.0.0
+
+# Document Loading
+pypdf>=3.17.0
+unstructured>=0.10.0
+
+# Configuration & Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Evaluation
+ragas>=0.1.0
+datasets>=2.14.0
+
+# CLI
+click>=8.1.0
+rich>=13.0.0
+
+# Logging & Metrics
+tqdm>=4.66.0
+
+# app 
+streamlit >=1.37.1
