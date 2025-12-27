@@ -377,14 +377,12 @@ python cli.py evaluate -o results.json
 
 ## 👥 Team
 
-| GitHub | Contributor |
-|--------|-------------|
-| [@mostaphaelansari](https://github.com/mostaphaelansari) | Mostapha El Ansari |
-| [@elkhilyass](https://github.com/elkhilyass) | Ilyass El KHAZANE |
-| [@akiraaymane](https://github.com/akiraaymane) | Aymane Dhimen |
-| [@mendyvincent](https://github.com/mendyvincent) | Vincent Mendy |
-
-| Marouane Rbib|
+| Contributor |
+|--------------------|
+| Mostapha El Ansari |
+| Nassim Hajji      |
+| Aymane Dhimen      |
+| Adam khali        |
 ---
 
 ## 📚 References
