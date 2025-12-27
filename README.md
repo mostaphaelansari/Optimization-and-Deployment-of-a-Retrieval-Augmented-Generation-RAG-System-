@@ -493,7 +493,7 @@ docker-compose build --no-cache
 
 ## 📄 License
 
-This project is developed for educational purposes as part of the RAG TP assignment.
+This project is developed for educational purposes as part of the RAG project assignment.
 
 ---
 
