@@ -473,6 +473,7 @@ docker-compose build --no-cache
 | Mostapha El Ansari |
 | Aymane Dhimen      |
 | Adam khali        |
+|Nassim Hajji |
 ---
 
 ## 📚 References
